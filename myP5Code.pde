@@ -4,16 +4,25 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-
+var ballSize = 110;
+var ballGuy = 100;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
+//triangle guy
+fill(255, 255, 0)
+triangle(400, 300, 450, 230, 500, 300);
 
+//ball guy
+fill(100, 0, 0)
+ellipse(ballGuy, 300, ballSize, ballSize);
 
-
+ballGuy = ballGuy + 6;
+  if(ballGuy > 700)
+ballGuy = -700;
 
 
 
