@@ -7,24 +7,41 @@ void setup() {
 var ballSize = 110;
 var ballGuy = 100;
 
+var squarePos = -4
+
+var triPos = -4
+
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
+
+  //square dude
+  fill(0, 255, 0)
+  rect(squarePos, 239, 8, 8);
   
 //triangle guy
 fill(255, 255, 0)
-triangle(400, 300, 450, 230, 500, 300);
+triangle(triPos - 30, 280, triPos + 30, 280, triPos, 244);
 
 //ball guy
 fill(100, 0, 0)
 ellipse(ballGuy, 300, ballSize, ballSize);
 
+//animations
 ballGuy = ballGuy + 6;
   if(ballGuy > 700)
 ballGuy = -700;
 
+squarePos = squarePos + 0.256
 
+if(squarePos > 650)
+squarePos = -10
+
+if(triPos > 650)
+triPos = -50
+
+triPos = triPos + 2
 
   if(mousePressed){showXYPositions();}
 
